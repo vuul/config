@@ -1,0 +1,40 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+order += "battery 0"
+order += "cpu_temperature 0"
+order += "volume master"
+order += "time"
+
+battery 0 {
+        format = "%status%percentage"
+        format_down = "No battery"
+        status_chr = "B: +"
+        status_bat = "B: -"
+        status_unk = "UNK"
+        status_full = "B: "
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+        threshold_type = percentage
+}
+
+time {
+        format = "%a %b %d %-I:%M%P"
+}
+
+cpu_temperature 0 {
+        format = "T: %degrees °C"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon7/temp1_input"
+        max_threshold = 80
+}
+
+volume master {
+        format = "V: %volume"
+        format_muted = "V: %volume(m)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
