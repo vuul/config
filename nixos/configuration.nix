@@ -93,6 +93,13 @@
     ];
   };
 
+  system.activationScripts.binbash = {
+    deps = [ "binsh" ];
+    text = ''
+         ln -s /bin/sh /bin/bash
+    '';
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
