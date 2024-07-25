@@ -98,7 +98,6 @@
     wrapperFeatures.gtk = true; # so that gtk works properly
     extraSessionCommands = ''
       export SDL_VIDEODRIVER=wayland
-      export _JAVA_AWT_WM_NONREPARENTING=1
       export MOZ_ENABLE_WAYLAND=1
     '';
   };
