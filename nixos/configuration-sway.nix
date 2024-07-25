@@ -15,14 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # networking.hostName = "nixos"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  networking.networkmanager.settings = {
-    ipv6 = {
-      method = "disabled";
-    };
-  };
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "US/Pacific";
@@ -139,7 +132,6 @@
 
   # List services that you want to enable:
   networking.firewall.enable = true;
-  networking.enableIPv6 = false;
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
