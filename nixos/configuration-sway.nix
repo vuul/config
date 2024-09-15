@@ -91,6 +91,12 @@
     grim
     slurp
     dmenu
+    brave
+    sway-contrib.grimshot
+    ungoogled-chromium
+    drawing
+    libheif
+
   ];
 
   programs.sway = {
